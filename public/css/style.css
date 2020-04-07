@@ -1,0 +1,25 @@
+
+a {
+    display: none;
+}
+
+body {
+    background-color: #252525;
+    font-family: Montserrat, serif;
+    color: white;
+}
+
+img {
+    display: none;
+    margin: auto;
+}
+
+#review {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+    line-height:50px;
+    display: none;
+
+}
