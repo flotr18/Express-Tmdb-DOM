@@ -51,9 +51,6 @@ function input() {
 
             }
 
-
-
-
             fetch('https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=27beba95fd51654379e58b8e53c1c594&language=en-US')
                 .then((res) => {
                     return res.json() // Convert Recepted Data into JSON Format
@@ -61,8 +58,8 @@ function input() {
                 .then((data) => {
                     console.log(data);
                     let video =  data.results[0].key; // Retrieved key youtube video by using id var
-                    let b = document.querySelector("a");
-                    b.setAttribute("href",'https://www.youtube.com/watch?v=' + video); // Set href attribute to youtube video link
+                    let b = document.querySelector("iframe");
+                    b.setAttribute("src",'https://www.youtube.com/embed/' + video); // Set href attribute to youtube video link
                     let link = document.getElementById('link').style.display = "block"; // Changed display attribute from hidden to block
 
 
