@@ -8,7 +8,18 @@ function input() {
             return res.json() // Convert Recepted Data into JSON Format
         })
         .then((data) => {
+
+
             console.log(data.results[0]); // Display Data
+
+            let result = data.results[0];
+
+            if (result === undefined){
+                alert('No Way ! Try Again');
+                document.getElementById('item').value = '';
+            }
+
+
 
             let id = data.results[0].id; // To be used to find the youtube video key in a further request
             let img = document.querySelector("img"); // Select the img tag in the purpose to set src attribute to poster var
@@ -39,6 +50,8 @@ function input() {
                 mark.style.backgroundColor = '#1D8653' // Depends of the average vote, the color will change
 
             }
+
+
 
 
             fetch('https://api.themoviedb.org/3/movie/' + id + '/videos?api_key=27beba95fd51654379e58b8e53c1c594&language=en-US')
