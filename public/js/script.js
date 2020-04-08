@@ -15,7 +15,7 @@ function input() {
             let result = data.results[0];
 
             if (result === undefined){
-                alert('No Way ! Try Again');
+                alert('Movie not found ! Try Again');
                 document.getElementById('item').value = '';
             }
 
